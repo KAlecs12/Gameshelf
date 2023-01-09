@@ -22,24 +22,16 @@ class RegistrationFormType extends AbstractType
                 'label' => false,
 
             ])
-            ->add('firstName', TextType::class, [
-                'label' => false,
-
-            ])
-            ->add('lastName', TextType::class, [
-                'label' => false,
-
-            ])
             ->add('email', TextType::class, [
                 'label' => false,
 
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
-                'label' => 'Conditions d\'utilisation ',
+                'label' => ' ',
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'Vous devez accepter nos conditions d\'utilisation.',
+                        'message' => 'You must accept our Terms and Conditions.',
                     ]),
                 ],
             ])
